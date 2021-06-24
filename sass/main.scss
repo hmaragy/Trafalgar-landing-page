@@ -1,0 +1,395 @@
+/* Imports */
+@font-face {
+  font-family: "mulish";
+  src: url("../fonts/mullish/Mulish-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "mulish";
+  src: url("../fonts/mullish/Mulish-ExtraBold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* Variables and Definitions */
+// $bg-color: hsl(0, 0%, 90%);
+$color-white: hsl(0, 0%, 100%);
+$color-black: hsl(0, 0%, 0);
+$color-primary: hsl(215, 91%, 62%);
+$linear-bg: linear-gradient(208.18deg, hsl(201, 85%, 68%) 10%, hsl(216, 85%, 65%) 90%);
+$color-secondary: hsl(259, 42%, 14%);
+
+/* Reset */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "mulish", sans-serif;
+}
+
+body {
+  background-color: $color-white;
+}
+
+/* Utilities */
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.active {
+  opacity: 1 !important;
+}
+
+.dot {
+  transform: translateY(-2px);
+  width: 0.8rem;
+  height: 0.8rem;
+  border: 2px solid $color-primary;
+  border-radius: 50%;
+  &:hover {
+    cursor: pointer;
+    background-color: $color-primary;
+  }
+  &--selected {
+    background-color: $color-primary;
+  }
+}
+
+/* Components */
+/* Header */
+/* Navigation */
+.nav {
+  padding: 4rem;
+
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  &__logo {
+    &--shape {
+      width: 3.2rem;
+      
+      text-align: center;
+      font-size: 2.6rem;
+      border-radius: 100%;
+      display: inline-block;
+
+      color: $color-white;
+      background-color: $color-primary;
+    }
+
+    &--text {
+      font-size: 2.4rem;
+    }
+  }
+  &__list {
+    display: flex;
+    font-size: 1.8rem;
+    list-style: none;
+    gap: 1rem;
+  }
+
+  &__link {
+    padding: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: $color-secondary;
+    opacity: 0.5;
+    display: inline-block;
+  }
+
+  &__link:not(.active):hover {
+    transform: translateY(-2px);
+    opacity: 1;
+  }
+  &__link:not(.active):active {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+/* Main Header */
+.main-heading {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+
+  &__head {
+    flex-basis: 35%;
+    &--main {
+      font-size: 4.8rem;
+      font-weight: bold;
+      margin-bottom: 2.5rem;
+    }
+    &--sub {
+      font-size: 2.1rem;
+      line-height: 3.2rem;
+      opacity: 0.5;
+      margin-bottom: 2.5rem;
+    }
+  }
+
+  &__image {
+    max-width: 100%;
+  }
+}
+
+/* Button Component */
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  padding: 1rem 2rem;
+  border-radius: 10rem;
+  font-size: 1.8rem;
+  margin-top: 1rem;
+
+  transition: all 0.2s;
+
+  &--primary {
+    color: $color-white;
+    background-color: $color-primary;
+    &:hover {
+      background-color: lighten($color-primary, 10%);
+    }
+}
+
+  &--secondary {
+    color: $color-primary;
+    background-color: $color-white;
+    border: 1px solid $color-primary;
+  }
+
+  &:hover {
+    transform: translateY(-3px);
+  }
+  &:active {
+    transform: translateY(0);
+  }
+}
+
+.hr {
+  width: 8rem;
+  border: none;
+  margin: 2.5rem 0;
+  display: block;
+  height: 2px;
+  background-color: $color-black;
+  &--center {
+    text-align: center;
+    margin: 2.5rem auto;
+  }
+  &--left {
+    text-align: left;
+  }
+  &--white {
+    background-color: $color-white;
+  }
+}
+
+/* Services Section */
+.services-section {
+  margin: 10rem auto;
+
+  &__heading {
+    max-width: 100rem;
+    margin: auto;
+    text-align: center;
+    &--main {
+      font-weight: bold;
+      font-size: 3.6rem;
+    }
+    &--sub {
+      opacity: 0.5;
+      font-size: 1.8rem;
+      line-height: 3rem;
+      margin-bottom: 2.5rem;
+    }
+  }
+  &__button-box {
+    text-align: center;
+    margin-top: 4rem;
+  }
+}
+
+.services {
+  margin-top: 4rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4rem;
+  justify-content: center;
+  align-items: center;
+
+  &__service {
+    cursor: pointer;
+    padding: 5rem 4rem;
+    max-width: 35rem;
+    box-shadow: 4px 4px 5px rgba(229, 233, 246, 0.4);
+    border-radius: 2rem;
+    &:hover {
+      box-shadow: 2px 2px 4px 5px rgba(229, 233, 246, 0.4);
+    }
+  }
+  &__image-box {
+      margin-bottom: 2rem;
+  }
+  &__text {
+    &--main {
+      font-size: 2.4rem;
+      margin-bottom: 2rem;
+    }
+    &--sub {
+      opacity: 0.5;
+      font-size: 1.6rem;
+      line-height: 2.8rem;
+      margin-bottom: 2rem;
+    }
+  }
+}
+
+.content-section {
+  margin: 10rem auto;
+  
+  display: flex;
+  flex-wrap: wrap;
+
+  justify-content: space-evenly;
+  align-items: center;
+
+  &__head {
+    flex-basis: 27%;
+    &--main {
+      font-size: 3.6rem;
+      font-weight: bold;
+      margin-bottom: 2.5rem;
+    }
+    &--sub {
+      text-align: justify;
+      font-size: 1.8rem;
+      line-height: 3rem;
+      opacity: 0.5;
+      margin-bottom: 2.5rem;
+    }
+  }
+  &__image-box {
+    flex-basis: 50%;
+  }
+  &__image {
+    max-width: 100%;
+  }
+}
+
+.health-care-section {
+  flex-direction: row-reverse;
+}
+
+.reviews-section {
+  margin: 10rem auto;
+  max-width: 120rem;
+
+  color: $color-white;
+  text-align: center;
+
+  &__head {
+    margin-bottom: 5rem;
+    &--main {
+      font-size: 3.6rem;
+    }
+  }
+
+  &__controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.2rem;
+  }
+} 
+
+.reviews-section--dark {
+  padding: 8rem 2rem;
+  background-image: $linear-bg;
+  border-radius: 2.4rem;
+  margin-bottom: 3rem;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.review {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+
+  &__left {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  &__image {
+    width: 11.3rem;
+    height: 11.3rem;
+    display: inline-block;
+    max-width: 100%;
+    border-radius: 50%;
+    border: 2px solid $color-white;
+    object-fit: cover;
+  }
+
+  &__reviewer {
+    &--name {
+      font-size: 2.2rem;
+      margin-bottom: 1.5rem;
+    }
+    &--job {  
+      font-size: 1.8rem;
+    } 
+  }
+
+  &__right {
+    width: 42rem;
+    text-align: justify;
+    q {
+      font-size: 1.9rem;
+      line-height: 3rem;
+    }
+  }
+
+}
+.radio-check {
+  display: none;
+
+  &:checked + * {
+    animation: 1s appear cubic-bezier(0.075, 0.82, 0.265, 0.5) forwards running;  
+  }
+
+  
+  &:not(:checked) + * {
+    * {
+      display: none;
+    }
+  }  
+}
+
+@keyframes appear {
+  0% {
+    transform: translateX(100rem);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}

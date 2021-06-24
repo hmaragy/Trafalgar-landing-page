@@ -1,0 +1,353 @@
+/* Imports */
+@font-face {
+  font-family: "mulish";
+  src: url("../fonts/mullish/Mulish-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "mulish";
+  src: url("../fonts/mullish/Mulish-ExtraBold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+/* Variables and Definitions */
+/* Reset */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "mulish", sans-serif;
+}
+
+body {
+  background-color: white;
+}
+
+/* Utilities */
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.active {
+  opacity: 1 !important;
+}
+
+.dot {
+  transform: translateY(-2px);
+  width: 0.8rem;
+  height: 0.8rem;
+  border: 2px solid #468ff6;
+  border-radius: 50%;
+}
+.dot:hover {
+  cursor: pointer;
+  background-color: #468ff6;
+}
+.dot--selected {
+  background-color: #468ff6;
+}
+
+/* Components */
+/* Header */
+/* Navigation */
+.nav {
+  padding: 4rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.nav__logo--shape {
+  width: 3.2rem;
+  text-align: center;
+  font-size: 2.6rem;
+  border-radius: 100%;
+  display: inline-block;
+  color: white;
+  background-color: #468ff6;
+}
+.nav__logo--text {
+  font-size: 2.4rem;
+}
+.nav__list {
+  display: flex;
+  font-size: 1.8rem;
+  list-style: none;
+  gap: 1rem;
+}
+.nav__link {
+  padding: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: #1e1533;
+  opacity: 0.5;
+  display: inline-block;
+}
+.nav__link:not(.active):hover {
+  transform: translateY(-2px);
+  opacity: 1;
+}
+.nav__link:not(.active):active {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Main Header */
+.main-heading {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.main-heading__head {
+  flex-basis: 35%;
+}
+.main-heading__head--main {
+  font-size: 4.8rem;
+  font-weight: bold;
+  margin-bottom: 2.5rem;
+}
+.main-heading__head--sub {
+  font-size: 2.1rem;
+  line-height: 3.2rem;
+  opacity: 0.5;
+  margin-bottom: 2.5rem;
+}
+.main-heading__image {
+  max-width: 100%;
+}
+
+/* Button Component */
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  padding: 1rem 2rem;
+  border-radius: 10rem;
+  font-size: 1.8rem;
+  margin-top: 1rem;
+  transition: all 0.2s;
+}
+.btn--primary {
+  color: white;
+  background-color: #468ff6;
+}
+.btn--primary:hover {
+  background-color: #77adf9;
+}
+.btn--secondary {
+  color: #468ff6;
+  background-color: white;
+  border: 1px solid #468ff6;
+}
+.btn:hover {
+  transform: translateY(-3px);
+}
+.btn:active {
+  transform: translateY(0);
+}
+
+.hr {
+  width: 8rem;
+  border: none;
+  margin: 2.5rem 0;
+  display: block;
+  height: 2px;
+  background-color: black;
+}
+.hr--center {
+  text-align: center;
+  margin: 2.5rem auto;
+}
+.hr--left {
+  text-align: left;
+}
+.hr--white {
+  background-color: white;
+}
+
+/* Services Section */
+.services-section {
+  margin: 10rem auto;
+}
+.services-section__heading {
+  max-width: 100rem;
+  margin: auto;
+  text-align: center;
+}
+.services-section__heading--main {
+  font-weight: bold;
+  font-size: 3.6rem;
+}
+.services-section__heading--sub {
+  opacity: 0.5;
+  font-size: 1.8rem;
+  line-height: 3rem;
+  margin-bottom: 2.5rem;
+}
+.services-section__button-box {
+  text-align: center;
+  margin-top: 4rem;
+}
+
+.services {
+  margin-top: 4rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4rem;
+  justify-content: center;
+  align-items: center;
+}
+.services__service {
+  cursor: pointer;
+  padding: 5rem 4rem;
+  max-width: 35rem;
+  box-shadow: 4px 4px 5px rgba(229, 233, 246, 0.4);
+  border-radius: 2rem;
+}
+.services__service:hover {
+  box-shadow: 2px 2px 4px 5px rgba(229, 233, 246, 0.4);
+}
+.services__image-box {
+  margin-bottom: 2rem;
+}
+.services__text--main {
+  font-size: 2.4rem;
+  margin-bottom: 2rem;
+}
+.services__text--sub {
+  opacity: 0.5;
+  font-size: 1.6rem;
+  line-height: 2.8rem;
+  margin-bottom: 2rem;
+}
+
+.content-section {
+  margin: 10rem auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.content-section__head {
+  flex-basis: 27%;
+}
+.content-section__head--main {
+  font-size: 3.6rem;
+  font-weight: bold;
+  margin-bottom: 2.5rem;
+}
+.content-section__head--sub {
+  text-align: justify;
+  font-size: 1.8rem;
+  line-height: 3rem;
+  opacity: 0.5;
+  margin-bottom: 2.5rem;
+}
+.content-section__image-box {
+  flex-basis: 50%;
+}
+.content-section__image {
+  max-width: 100%;
+}
+
+.health-care-section {
+  flex-direction: row-reverse;
+}
+
+.reviews-section {
+  margin: 10rem auto;
+  max-width: 120rem;
+  color: white;
+  text-align: center;
+}
+.reviews-section__head {
+  margin-bottom: 5rem;
+}
+.reviews-section__head--main {
+  font-size: 3.6rem;
+}
+.reviews-section__controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.reviews-section--dark {
+  padding: 8rem 2rem;
+  background-image: linear-gradient(208.18deg, #68c2f3 10%, #5a97f2 90%);
+  border-radius: 2.4rem;
+  margin-bottom: 3rem;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.review {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.review__left {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+}
+.review__image {
+  width: 11.3rem;
+  height: 11.3rem;
+  display: inline-block;
+  max-width: 100%;
+  border-radius: 50%;
+  border: 2px solid white;
+  object-fit: cover;
+}
+.review__reviewer--name {
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+}
+.review__reviewer--job {
+  font-size: 1.8rem;
+}
+.review__right {
+  width: 42rem;
+  text-align: justify;
+}
+.review__right q {
+  font-size: 1.9rem;
+  line-height: 3rem;
+}
+
+.radio-check {
+  display: none;
+}
+.radio-check:checked + * {
+  animation: 1s appear cubic-bezier(0.075, 0.82, 0.265, 0.5) forwards running;
+}
+.radio-check:not(:checked) + * * {
+  display: none;
+}
+
+@keyframes appear {
+  0% {
+    transform: translateX(100rem);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
