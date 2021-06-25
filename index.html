@@ -17,6 +17,8 @@
           <span class="nav__logo--shape">T</span>
           <span class="nav__logo--text">Trafalgar</span>
         </div>
+        <input id="nav__checkbox" class="nav__checkbox" type="checkbox">
+        <label class="nav__checkbox-label" for="nav__checkbox"></label>
 
         <ul class="nav__list">
           <li class="nav__list-item"><a href="#" class="nav__link active">Home</a></li>
@@ -146,13 +148,15 @@
       </div>
     </section>
 
+
     <section class="reviews-section">
+      <input class="radio-check" type="radio" name="review" id="dot--1" checked>
+      <input class="radio-check" type="radio" name="review" id="dot--2">
       <div class="reviews-section--dark">
         <div class="reviews-section__head">
           <h2 class="reviews-section__head--main">What our customer are saying</h2>
           <hr class="hr hr--center hr--white">
         </div>
-        <input class="radio-check" type="radio" name="review" id="dot--1" checked>
         <div class="review review-1">
           <div class="review__left">
             <div class="review__image-box">
@@ -169,7 +173,6 @@
               or administrative hassle) and securely</q>
           </div>
         </div>
-        <input class="radio-check" type="radio" name="review" id="dot--2">
         <div class="review review-2">
           <div class="review__left">
             <div class="review__image-box">
@@ -186,18 +189,106 @@
               or administrative hassle) and securely</q>
           </div>
         </div>
-
       </div>
       <div class="reviews-section__controls">
-        <div class="leftArrow"><img src="images/left-arrow.svg" alt=""></div>
+        <div class="leftArrow"><img src="images/left-arrow.svg" alt="Left Arrow"></div>
         <label for="dot--1" class="dot dot--1 dot--selected"></label>
         <label for="dot--2" class="dot dot--2"></label>
-        <div class="rightArrow"><img src="images/right-arrow.svg" alt=""></div>
+        <div class="rightArrow"><img src="images/right-arrow.svg" alt="Right Arrow"></div>
       </div>
     </section>
 
-    <div style="height:5000px;"></div>
+    <section class="articles-section">
+      <div class="articles-section__heading">
+        <h2 class="articles-section__heading--main">Check out our latest article</h2>
+        <hr class="hr hr--center">
+      </div>
+
+      <div class="articles">
+        <div class="articles__article">
+          <div class="articles__image-box">
+            <img src="images/injection.png" alt="Doctor Injects Patient" class="articles__image">
+          </div>
+          <div class="articles__text-box">
+            <h3 class="articles__text-box--main">Disease detection, check up in the laboratory</h3>
+            <p class="articles__text-box--sub">
+              In this case, the role of the health laboratory is very important to do
+              a disease detection...
+            </p>
+            <a href="#" class="btn btn--bare">Read more <img src="images/right-arrow.svg" alt="Right Arrow"></a>
+          </div>
+        </div>
+        <div class="articles__article">
+          <div class="articles__image-box">
+            <img src="images/microscope.png" alt="Doctor Injects Patient" class="articles__image">
+          </div>
+          <div class="articles__text-box">
+            <h3 class="articles__text-box--main">Disease detection, check up in the laboratory</h3>
+            <p class="articles__text-box--sub">
+              In this case, the role of the health laboratory is very important to do
+              a disease detection...
+            </p>
+            <a href="#" class="btn btn--bare">Read more <img src="images/right-arrow.svg" alt="Right Arrow"></a>
+          </div>
+        </div>
+        <div class="articles__article">
+          <div class="articles__image-box">
+            <img src="images/face-mask.png" alt="Doctor Injects Patient" class="articles__image">
+          </div>
+          <div class="articles__text-box">
+            <h3 class="articles__text-box--main">Disease detection, check up in the laboratory</h3>
+            <p class="articles__text-box--sub">
+              In this case, the role of the health laboratory is very important to do
+              a disease detection...
+            </p>
+            <a href="#" class="btn btn--bare">Read more <img src="images/right-arrow.svg" alt="Right Arrow"></a>
+          </div>
+        </div>
+      </div>
+      <div class="articles-section__button-box">
+        <a href="#" class="btn btn--secondary">View all</a>
+      </div>
+    </section>
   </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__flex">
+        <div class="footer__text">
+          <div class="footer__logo">
+            <span class="footer__logo--shape">T</span>
+            <span class="footer__logo--text">Trafalgar</span>
+          </div>
+          <p class="footer__text--paragraph">Trafalgar provides progressive, and affordable healthcare, accessible on
+            mobile and
+            online for everyone</p>
+          <p class="footer__text--paragraph">©Trafalgar PTY LTD 2020. All rights reserved</p>
+        </div>
+        <div class="footer__links-list">
+          <h3 class="footer__links-list--head">Company</h3>
+          <a href="#" class="footer__links-list--link">About</a>
+          <a href="#" class="footer__links-list--link">Testimonials</a>
+          <a href="#" class="footer__links-list--link">Find a doctor</a>
+          <a href="#" class="footer__links-list--link">Apps</a>
+        </div>
+        <div class="footer__links-list">
+          <h3 class="footer__links-list--head">Region</h3>
+          <a href="#" class="footer__links-list--link">Indonesia</a>
+          <a href="#" class="footer__links-list--link">Singaphore</a>
+          <a href="#" class="footer__links-list--link">Hong Kong</a>
+          <a href="#" class="footer__links-list--link">Canada</a>
+        </div>
+        <div class="footer__links-list">
+          <h3 class="footer__links-list--head">Help</h3>
+          <a href="#" class="footer__links-list--link">Help center</a>
+          <a href="#" class="footer__links-list--link">Contact support</a>
+          <a href="#" class="footer__links-list--link">Instructions</a>
+          <a href="#" class="footer__links-list--link">How it works</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <div class="overlay"></div>
 </body>
 
 </html>
